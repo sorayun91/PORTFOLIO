@@ -1,11 +1,18 @@
 import Link from 'next/link';
 import Layout from '../components/Layout'
-import fetch from 'isomorphic-unfetch'
+/*import fetch from 'isomorphic-unfetch'*/
 
+export default function Index() {
+    return (
+        <Layout>
+            <h1>Home</h1>
+        </Layout>
+    )
+}
 
-const Index = props => (
+/*const Index = props => (
     <Layout>
-        <h1>TV Shows</h1>
+        <h1>Home</h1>
         <ul>
             {props.shows.map(show => (
                 <li key = {show.id}>
@@ -28,8 +35,8 @@ Index.getInitialProps = async function() {
         shows: data.map(entry => entry.show)
     }
 }
-/*새로 고침을 할 경우 서버의 콘솔에서만 메세지가 출력되는 것을 볼 수 있습니다. */
-export default Index
+/!*새로 고침을 할 경우 서버의 콘솔에서만 메세지가 출력되는 것을 볼 수 있습니다. *!/
+export default Index*/
 
 /*
 const PostLink = props => (

@@ -1,15 +1,20 @@
 import Header from '../components/Header'
 
 const layoutStyle = {
-    margin: 20,
-    padding: 20,
-    border: '1px solid #ddd'
+    display: "flex",
+    width: 1200,
+    margin: "50px  auto"
+}
+const contentStyle = {
+    width: 1000,
 }
 
 const Layout = props => (
     <div style={layoutStyle}>
         <Header />
-        {props.children}
+        <div style={contentStyle}>
+            {props.children}
+        </div>
         <style jsx global>{
             `            body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
             fieldset,img {border:0 none}

@@ -1,23 +1,33 @@
 import Link from 'next/link';
 
-const linkStyle = {
-    marginRight: 15
-}
-
 const Header = () => (
     <nav>
-        <ul>
-            <li>
+        <ul className="left-menu-wrap">
+            <li className="left-menu">
                 <Link href="/">
-                    <a style={linkStyle}>Home</a>
+                    <a>Home</a>
                 </Link>
             </li>
-            <li>
+            <li className="left-menu">
                 <Link href="/about">
-                    <a style={linkStyle}>About</a>
+                    <a>About</a>
+                </Link>
+            </li>
+            <li className="left-menu">
+                <Link href="/skill">
+                    <a>Skill Set</a>
+                </Link>
+            </li>
+            <li className="left-menu">
+                <Link href="/project">
+                    <a>Project List</a>
                 </Link>
             </li>
         </ul>
+        <style jsx>{`
+            .left-menu-wrap { width:200px }
+            .left-menu { font-size:15px; }
+        `}</style>
     </nav>
 )
 
